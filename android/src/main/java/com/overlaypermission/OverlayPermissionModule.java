@@ -1,5 +1,5 @@
 
-package com.com.overlaypermission;
+package com.overlaypermission;
 
 
 import android.content.Context;
