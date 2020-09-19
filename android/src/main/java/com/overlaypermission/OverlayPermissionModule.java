@@ -30,7 +30,7 @@ public class OverlayPermissionModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "OverlayPermission";
+        return "OverlayPermissionModule";
     }
 
     @ReactMethod
