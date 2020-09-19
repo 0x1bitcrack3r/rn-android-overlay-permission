@@ -1,0 +1,16 @@
+{
+  "name": "rn-android-overlay-permission",
+  "version": "1.0.0",
+  "description": "Overlay Permission for Android apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Android",
+    "Overlay Permission",
+    "Permissions"
+  ],
+  "author": "0x1bitcrack3r a.k.a VishnuRamineni (VR)",
+  "license": "ISC"
+}
