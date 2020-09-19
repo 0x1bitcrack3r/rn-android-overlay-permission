@@ -1,6 +1,6 @@
 {
   "name": "rn-android-overlay-permission",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Overlay Permission for Android apps",
   "main": "index.js",
   "scripts": {
