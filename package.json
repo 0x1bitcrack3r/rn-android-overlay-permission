@@ -6,12 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "Android",
     "Overlay Permission",
     "Permissions"
   ],
   "author": "0x1bitcrack3r a.k.a VishnuRamineni (VR)",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x1bitcrack3r/rn-android-overlay-permission.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0x1bitcrack3r/rn-android-overlay-permission/issues"
+  },
+  "homepage": "https://github.com/0x1bitcrack3r/rn-android-overlay-permission#readme"
 }
