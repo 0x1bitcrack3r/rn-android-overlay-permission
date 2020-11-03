@@ -40,9 +40,11 @@ public class OverlayPermissionModule extends ReactContextBaseJavaModule {
          *  but in newer android versions this is mandatory
          */
         try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this.reactContext)) {
-                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + this.reactContext.getPackageName()));
-                this.reactContext.startActivityForResult(intent, 0, null);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if(!Settings.canDrawOverlays(this.reactContext)) {
+                    Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + this.reactContext.getPackageName()));
+                    this.reactContext.startActivityForResult(intent, 0, null);
+                }
             } else {
                 promise.resolve(true);
             }
