@@ -2,52 +2,64 @@
 
 # rn-android-overlay-permission
 
-This module is to request screen overlay permission from user in react-native based android application
+This module is used to request screen overlay permission from the user in a react-native based Android application.
 
 ## Getting started
 
-`$ npm install rn-android-overlay-permission --save`
+To install the module, run the following command:
 
-### Mostly automatic installation
+```shell
+$ npm install rn-android-overlay-permission --save
+```
 
-`$ react-native link rn-android-overlay-permission`
+### Automatic installation
 
-### Add these permissions in AndroidManifest.xml
+To automatically link the module, run the following command:
 
-```javascript
-<uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
-<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+```shell
+$ react-native link rn-android-overlay-permission
 ```
 
 ### Manual installation
 
 #### Android
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
+For Java developers, open `android/app/src/main/java/[...]/MainActivity.java`. For Kotlin developers, open `android/app/src/main/java/[...]/MainActivity.kt`.
 
-- Add `import com.overlaypermission.OverlayPermissionPackage;` to the imports at the top of the file
+Add the following import statement at the top of the file:
 
-2. Append the following lines to `android/settings.gradle`:
+```java
+import com.overlaypermission.OverlayPermissionPackage;
+```
 
-   ```
-       include ':rn-android-overlay-permission'
-       project(':rn-android-overlay-permission').projectDir = new File(rootProject.projectDir, '../node_modules/rn-android-overlay-permission/android')
-   ```
+Append the following lines to `android/settings.gradle`:
 
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-   ```
-       compile project(':rn-android-overlay-permission')
-   ```
+```groovy
+include ':rn-android-overlay-permission'
+project(':rn-android-overlay-permission').projectDir = new File(rootProject.projectDir, '../node_modules/rn-android-overlay-permission/android')
+```
+
+Insert the following line inside the dependencies block in `android/app/build.gradle`:
+
+```groovy
+implementation project(':rn-android-overlay-permission')
+```
 
 ## Usage
 
-```javascript
-//requestOverlayPermission Navigates to permission settings
-OverlayPermissionModule.requestOverlayPermission();
-```
+To navigate to the permission settings, use the following code:
 
 ```javascript
 import OverlayPermissionModule from "rn-android-overlay-permission";
+
+OverlayPermissionModule.requestOverlayPermission();
+```
+
+To check if the overlay permission is granted and display an alert, use the following code:
+
+```javascript
+import OverlayPermissionModule from "rn-android-overlay-permission";
+import { Platform, Alert } from "react-native";
 
 if (Platform.OS === "android") {
   OverlayPermissionModule.isRequestOverlayPermissionGranted((status: any) => {
