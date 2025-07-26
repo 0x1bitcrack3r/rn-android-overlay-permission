@@ -2,7 +2,26 @@
 
 # rn-android-overlay-permission
 
-This module is to request screen overlay permission from user in react-native based android application
+## React Native utility for managing Android overlay permissions optimized for accessibility-focused applications.
+
+This lightweight module enables React Native apps to check and request overlay permissions (SYSTEM_ALERT_WINDOW) on Android devices. These permissions are crucial for apps that draw over other apps, especially those providing accessibility enhancements such as:
+
+- Assistive overlays (e.g., magnifiers, screen readers, text-to-speech aids)
+
+- Floating buttons or navigation aids for users with motor impairments
+
+- Real-time user guidance or help tools for cognitive accessibility
+
+If you're developing tools to support digital inclusion, this module helps streamline the permission flow and ensure a smoother, more compliant user experience.
+
+## ✨ Features
+- ✅ Check if overlay permission is currently granted
+
+- 🔓 Prompt users to open the system settings to enable overlay access
+
+- 🔄 Asynchronous API with Promise support for clean integration
+
+- ♿️ Built with accessibility use-cases in mind
 
 ## Getting started
 
@@ -72,3 +91,23 @@ if (Platform.OS === "android") {
   });
 }
 ```
+
+## ♿ Accessibility Use-Cases
+This plugin is ideal for apps that:
+
+- Display accessibility layers (e.g., custom focus indicators, reading overlays)
+
+- Offer floating UI elements for users with physical disabilities
+
+- Implement always-on-top assistive controls or gesture aids
+
+Overlay permissions are a critical enabler for inclusive design. With rn-android-overlay-permission, you can ensure users are guided appropriately through the permission flow without breaking your accessibility goals.
+
+## 📋 Requirements
+- Android only (React Native)
+- Requires API level 23 (Android 6.0) or higher
+
+## 📄 License
+MIT
+
+
